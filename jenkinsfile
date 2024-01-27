@@ -1,0 +1,25 @@
+pipeline{
+agent any
+stages{
+stage('first stage'){
+steps{
+git 'https://github.com/SriThriveni/assignment.git'
+}
+}
+stage('second stage'){
+steps{
+build 'git_job'
+}
+}
+stage('third stage'){
+steps{
+echo 'this is testing stage'
+}
+}
+stage('fourth stage'){
+steps{
+echo 'this is deploy stage'
+}
+}
+}
+}
